@@ -1,7 +1,20 @@
 // layout
-.l
-  &-content
-    grid-column: c-start / c-end
-  &-wrapper
-    align-items: center
-    height: 100vh
+.container
+  width: 100%
+  position: relative
+  display: grid
+  grid-template-rows: auto
+  grid-template-columns: auto [p-start] 30px [c-start] 1350px [c-end] 30px [p-end] auto
+  @include respond-to(xxl)
+    grid-template-columns: auto [p-start] 30px [c-start] 1100px [c-end] 30px [p-end] auto
+  @include respond-to(xl)
+    grid-template-columns: auto [p-start] 30px [c-start] 900px [c-end] 30px [p-end] auto
+  @include respond-to(lg)
+    grid-template-columns: auto [p-start] 30px [c-start] 660px [c-end] 30px [p-end] auto
+  @include respond-to(md)
+    grid-template-columns: auto [p-start] 30px [c-start] 480px [c-end] 30px [p-end] auto
+  @include respond-to(sm)
+    grid-template-columns: [p-start] 15px [c-start] auto [c-end] 15px [p-end]
+  &>.content 
+    grid-column: c-start/c-end
+    

@@ -1,0 +1,40 @@
+.work
+    @include background-image('./../img/background/bg-2.png')
+    height: 140vh
+    padding-top: 250px
+    &__content-wrapper
+        display: flex
+        flex-direction: column
+        align-items: start
+        justify-content: center
+    &__owl-carousel
+        margin-top: 60px
+    .card
+        min-height: 360px
+        display: flex
+        flex-direction: column
+        align-items: start
+        justify-content: start
+        padding: 40px 8px 14px 20px
+        &__img
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            z-index: -1;
+        &__num
+            font-weight: 800
+            font-size: 55px
+            line-height: 75px
+            color: $yellow
+        &__principle
+            font-weight: bold
+            font-size: 18px
+            line-height: 25px
+            color: $yellow
+        &__desc
+            font-weight: normal
+            font-size: 15px
+            line-height: 20px
+            margin-top: 18px
+
