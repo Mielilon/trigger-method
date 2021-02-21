@@ -59,3 +59,41 @@ $(".spheres-of-life__owl-carousel").owlCarousel({
         }
     }
 });
+
+
+$(".reviews__owl-carousel").owlCarousel({
+    loop: false,
+    margin: 30,
+    nav: true,
+    dots: false,
+    touchDrag: false,
+    navText: ['',''],
+    mouseDrag: false,
+    responsive: {
+        1000:{
+            items: 1
+        }
+    }
+});
+
+
+$('.video__owl-carousel').owlCarousel({
+    items:1,
+    merge:true,
+    loop:false,
+    margin: 0,
+    nav: true,
+    dots: false,
+    video:true,
+    navText: ['',''],
+    lazyLoad:false,
+    center:false,
+    responsive:{
+        480:{
+            items:2
+        },
+        600:{
+            items:3
+        }
+    }
+})

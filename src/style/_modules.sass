@@ -49,3 +49,42 @@
   margin-top: 18px
   &_yellow
     color: $yellow
+
+
+.owl-prev
+  left: -30px
+  transform: rotate(-45deg)
+  &:hover
+    transform: rotate(-45deg) scale(1.2)
+.owl-next
+  right: -20px
+  transform: rotate(135deg)
+  &:hover
+    transform: rotate(135deg) scale(1.2)
+.owl-prev, .owl-next
+  top: 40%
+  position: absolute
+  bottom: 0
+  margin: auto
+  outline: none
+  height: 35px
+  width: 35px
+  border: 3px solid $yellow !important
+  border-bottom: none !important
+  border-right: none !important
+  border-radius: 0 !important
+  transition: .2s
+  &:hover
+    background: transparent !important
+    transition: .2s
+  &:active
+    border-color: #cdcfb0 !important
+.disabled
+  border-color: #b1b0b0 !important
+  user-select: none
+.owl-prev.disabled
+  &:hover
+    transform: rotate(-45deg) scale(1) !important
+.owl-next.disabled
+  &:hover
+    transform: rotate(135deg) scale(1) !important
