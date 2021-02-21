@@ -10,11 +10,16 @@
   box-shadow: 0 0 30px -4px $yellow
   cursor: pointer
   outline: none
+  transition: .3s
+  &:hover
+    transform: scale(1.05)
+    transition: .3s
   &_transparent
     background: $transparent
     border: 3px solid #d6d4ae
     color: $orange
     padding: 12px 24px
+
   
 .text-gradient
   background: linear-gradient(to bottom, $orange, $white)
