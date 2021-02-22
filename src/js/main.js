@@ -113,3 +113,54 @@ $('.video__owl-carousel').owlCarousel({
         }
     }
 })
+
+
+function initForm() {
+    $('form').submit(function (e) {
+      e.preventDefault();
+      let mailExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+      let theForm = $(this);
+      const email = theForm.find('input[name="email"]').val();
+      const name = theForm.find('input[name="name"]').val();
+      const phone = theForm.find('input[name="phone"]').val();
+  
+      if (email && !mailExp.test(email)) {
+        theForm.find('.form__errors').text('Почта введена некорректно');
+        return false;
+      } else {
+        if (!name || !phone) {
+          theForm.find('.form__errors').text('Заполните все поля');
+          return false;
+        } else {
+          theForm.find('.form__errors').text('');
+        }
+      }
+  
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php',
+        data: theForm.serialize(),
+      })
+        .done(function () {
+          theForm
+            .find('.form__status')
+            .text('Сообщение успешно отправлено!')
+            .addClass('mt-12');
+          theForm.find('.form__submit').hide();
+        })
+        .fail(function () {
+          theForm
+            .find('.form__status')
+            .text(
+              'Ошибка отправки сообщения. Пожалуйста, повторите попытку'
+            )
+            .addClass('mt-12');
+          theForm.find('.form__submit').hide();
+        });
+  
+      return false;
+    });
+  }
+  
+  initForm();
+  

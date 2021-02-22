@@ -1,12 +1,14 @@
-section.form(id='form-page')
+section.form-page-page(id='form-page')
     .container 
         .content 
-            .form__content-wrapper 
-                h2.subtitle.form__title ОСТАВЬТЕ СВОИ КОНТАКТЫ И НАШ <br>
+            .form-page__content-wrapper 
+                h2.subtitle.form-page__title ОСТАВЬТЕ СВОИ КОНТАКТЫ И НАШ <br>
                     em.subtitle_white МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ:
-                form.form__items-wrapper
-                    input(type="text" placeholder="Имя").form__item
-                    input(type="tel" placeholder="Телефон").form__item
-                    input(type="email" placeholder="E-Mail").form__item
-                    button.button.form__button Оставить заявку
-    img(src="./img/other/figure-3.svg", alt="").form__figure
+                form.form.form-page__items-wrapper
+                    input(type="text" placeholder="Имя" name="name").form-page__item
+                    input(type="tel" placeholder="Телефон" name="phone").form-page__item
+                    input(type="email" placeholder="E-Mail" name="email").form-page__item
+                    p.form-page__errors
+                    p.form-page__status
+                    button.button.form-page__button Оставить заявку
+    img(src="./img/other/figure-3.svg", alt="").form-page__figure
