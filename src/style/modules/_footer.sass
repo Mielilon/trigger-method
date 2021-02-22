@@ -28,3 +28,21 @@
         text-decoration: none
         &:hover
             transform: scale(1.1)
+
+
+@include respond-to(md)
+    .footer
+        &__tel
+            font-size: 20px
+            line-height: 30px
+        &__logo
+            width: 60px
+        .social
+            margin-top: 50px
+            &__img
+                height: 35px
+                width: 35px
+            &__item
+                height: 40px
+                width: 40px
+                margin-right: 10px

@@ -29,3 +29,21 @@
     &__desc
         position: relative
         z-index: 1
+
+@include respond-to(lg)
+    .team
+        padding-bottom: 100px
+        &__items-wrapper 
+            flex-direction: column
+            align-items: center
+        &__item:last-child
+            text-align: end
+
+@include respond-to(sm)
+    .team
+        &__item
+            max-width: 260px
+        &__img
+            width: 270px
+            top: 120px
+            right: -20px

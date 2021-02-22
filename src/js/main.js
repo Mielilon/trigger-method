@@ -5,16 +5,23 @@ $(".work__owl-carousel").owlCarousel({
     loop: false,
     margin: 10,
     nav: true,
+    dots: false,
     touchDrag: false,
-    mouseDrag: false,
+    navText: ['',''],
     responsive: {
-        0:{
-            items:1
+        0: {
+            items: 1
         },
-        600:{
+        768: {
+            items: 2
+        },
+        992: {
             items:3
         },
-        1000:{
+        1400:{
+            items:4
+        },
+        1500:{
             items:5
         }
     }
@@ -23,20 +30,21 @@ $(".work__owl-carousel").owlCarousel({
 
 $(".tariffs__owl-carousel").owlCarousel({
     loop: false,
-    margin: 0,
+    margin: 20,
     nav: true,
+    dots: false,
     touchDrag: false,
-    mouseDrag: false,
+    navText: ['',''],
     responsive: {
         0:{
-            items:1
+            items:1,
         },
-        600:{
-            items:3
+        768:{
+            items: 2
         },
-        1000:{
+        1100:{
             items: 3
-        }
+        },
     }
 });
 
@@ -45,16 +53,21 @@ $(".spheres-of-life__owl-carousel").owlCarousel({
     loop: false,
     margin: 27,
     nav: true,
+    dots: false,
     touchDrag: false,
+    navText: ['',''],
     mouseDrag: false,
     responsive: {
         0:{
             items:1
         },
-        600:{
+        510:{
+            items:2
+        },
+        768:{
             items:3
         },
-        1000:{
+        992:{
             items: 4
         }
     }
@@ -70,7 +83,7 @@ $(".reviews__owl-carousel").owlCarousel({
     navText: ['',''],
     mouseDrag: false,
     responsive: {
-        1000:{
+        0:{
             items: 1
         }
     }
@@ -89,10 +102,13 @@ $('.video__owl-carousel').owlCarousel({
     lazyLoad:false,
     center:false,
     responsive:{
-        480:{
+        0: {
+            items:1
+        },
+        768:{
             items:2
         },
-        600:{
+        992:{
             items:3
         }
     }

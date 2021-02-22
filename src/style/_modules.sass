@@ -3,7 +3,7 @@
   background: linear-gradient(to right, $yellow 30%, $white 100%)
   text-decoration: none
   font-size: 24px
-  padding: 18px 50px;
+  padding: 18px 50px
   border: none
   border-radius: 20px
   color: $black
@@ -95,3 +95,23 @@
 .owl-next.disabled
   &:hover
     transform: rotate(135deg) scale(1) !important
+
+
+@include respond-to(md)
+  .button
+    padding: 10px 30px
+    font-size: 20px
+@include respond-to(sm)
+  .button
+    padding: 8px 24px
+    font-size: 18px
+    border-width: 2px
+    box-shadow: 0 0 10px -4px $yellow
+    
+@media screen and ( max-width: 580px )
+  .owl-prev, .owl-next
+    top: calc( 100% + 20px )
+  .owl-prev
+    left: 30% !important
+  .owl-next
+    right: 30% !important

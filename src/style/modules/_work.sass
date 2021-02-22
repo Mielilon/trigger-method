@@ -1,6 +1,6 @@
 .work
     @include background-image('./../img/background/bg-2.png')
-    min-height: 140vh
+    min-height: 1000px
     padding-top: 250px
     &__content-wrapper
         display: flex
@@ -28,4 +28,9 @@
             line-height: 75px
             color: $yellow
 
-
+@include respond-to(lg)
+    .work
+        .owl-prev
+            left: -50px
+        .owl-next
+            right: -50px

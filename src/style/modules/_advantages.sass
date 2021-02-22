@@ -13,3 +13,21 @@
         width: 100%
     &__item 
         max-width: 350px
+@include respond-to(xl)
+    .advantages
+        &__items
+            flex-wrap: wrap
+            justify-content: center
+        &__item
+            display: flex
+            align-items: center
+            flex-direction: column
+            text-align: center
+    
+@include respond-to(lg)
+    .advantages
+        &__items
+            margin-top: 0
+        &__item
+            margin-top: 20px
+

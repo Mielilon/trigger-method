@@ -20,3 +20,23 @@
     &__item
         max-width: 170px
         text-align: center
+
+@include respond-to(lg)
+    .result
+        &__items-wrapper 
+            margin-top: 50px
+            width: 100%
+            display: grid
+            grid-gap: 30px
+        &__desc
+            font-size: 13px
+            line-height: 20px
+@include respond-to(md)
+    .result
+        &__items-wrapper 
+            grid-template-columns: auto auto
+@include respond-to(sm)
+    .result
+        padding-bottom: 250px
+        &__items-wrapper 
+            grid-template-columns: auto

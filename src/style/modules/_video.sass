@@ -1,6 +1,6 @@
 .video
     @include background-image('./../img/background/bg-7.png') 
-    min-height: 150vh
+    min-height: 1100px
     padding-top: 320px
     &__item
         width: 100%
@@ -23,3 +23,8 @@
             transform: rotate(-45deg) scale(1.2)
     .owl-next
         right: -50px
+
+@include respond-to(xs)
+    .video
+        padding-top: 140px
+        min-height: 900px
