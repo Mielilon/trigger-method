@@ -15,7 +15,7 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: МЕТОД ТРИГГЕРА — психологический тренинг <metodtrigger@yandex.ru>\r\n";
 
-$recipient = "darya.mg354@mail.ru";
+$recipient = "metodtrigger@yandex.ru";
 $subject = "Заявка МЕТОД ТРИГГЕРА";
 
 if(isset($name) && isset($phone)) {
